@@ -17,6 +17,10 @@ platform:
   - x86
   - x64
 
+matrix:  # Node.js v22 is not yet installed on AppVeyor's Windows image for Visual Studio 2022
+  allow_failures:
+    - nodejs_version: 22
+
 # Install scripts. (runs after repo cloning)
 install:
   - python -V
